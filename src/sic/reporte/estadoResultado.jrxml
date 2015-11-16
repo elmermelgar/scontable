@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estadoResultado" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5a988dca-f3a1-41f4-97c5-86ba093b6160">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#5F9EA0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFFDFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="BC" uuid="172497a8-4c35-4363-a637-269314683181">
+		<queryString language="SQL">
+			<![CDATA[SELECT
+     mayor."saldo" AS mayor_saldo,
+     cuenta."nombre_cuenta" AS cuenta_nombre_cuenta
+FROM
+     "public"."partida" partida INNER JOIN "public"."mayor" mayor ON partida."id_partida" = mayor."id_partida"
+     INNER JOIN "public"."cuenta" cuenta ON partida."id_cuenta" = cuenta."id_cuenta"
+WHERE
+     "mayor".id_partida = "partida".id_partida and "partida".id_cuenta = "cuenta".id_cuenta]]>
+		</queryString>
+		<field name="mayor_saldo" class="java.math.BigDecimal"/>
+		<field name="cuenta_nombre_cuenta" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="inicio" class="java.lang.String"/>
+	<parameter name="fin" class="java.lang.String"/>
+	<parameter name="saldo_debe" class="java.lang.String"/>
+	<parameter name="saldo_haber" class="java.lang.String"/>
+	<parameter name="saldo" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[SELECT
+     cuenta."nombre_cuenta" AS cuenta_nombre_cuenta,
+     partida."id_cuenta" AS partida_id_cuenta,
+     mayor."saldo" AS mayor_saldo
+FROM
+     "public"."partida" partida FULL OUTER JOIN "public"."mayor" mayor ON partida."id_partida" = mayor."id_partida"
+     FULL OUTER JOIN "public"."cuenta" cuenta ON partida."id_cuenta" = cuenta."id_cuenta"]]>
+	</queryString>
+	<field name="rubro" class="java.lang.String"/>
+	<field name="saldo" class="java.lang.Double"/>
+	<variable name="saldo_debe" class="java.lang.Double">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<variable name="saldo_haber" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="555" height="33" uuid="08afad42-3ea4-47b4-8a16-874a66f40dcc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHOCOLAT HUELIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="44" width="555" height="29" uuid="5b274239-2033-4e5a-9ba3-15bf27a1d037"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[ESTADO DE RESULTADOS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="78" width="555" height="25" uuid="1036d59b-b588-4293-a324-73a106f49fa9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Del "+$P{inicio}+" al "+$P{fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="4" width="44" height="20" uuid="7dae075f-dcb3-4856-8c89-e1c64e90adb6"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rubro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="4" width="46" height="20" uuid="f0df73e7-daf6-4705-b483-4eb4eaed6208"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="49" y="23" width="425" height="1" uuid="09b08a2f-203c-4a53-8c67-25d845fd432c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="49" y="0" width="302" height="20" uuid="392f6179-cc93-4116-95af-1adf0e76dfb3"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rubro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="110" height="20" uuid="31608ee8-141e-44ab-84a8-77561695a8e8"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[( $F{saldo}>0.0 ? new DecimalFormat("0.00").format($F{saldo}) : "($ "+$F{saldo}*(-1.0)+" )" )]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

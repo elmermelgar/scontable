@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estadoCapital" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77cd9c5a-f5a0-45e0-a654-d15d7b066c3a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="f80fb067-45c3-43a9-b11e-e96f783bc05f">
+		<field name="rubro" class="java.lang.String"/>
+		<field name="saldo" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="inicio" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="fin" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="inversion" class="java.util.List" isForPrompting="false"/>
+	<parameter name="total_inversion" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="desinversion" class="java.util.List" isForPrompting="false"/>
+	<parameter name="total_desinversion" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="capital_social" class="java.lang.Double" isForPrompting="false"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="54" width="545" height="29" uuid="4a1ca658-def5-4553-a6bc-6e233c6a3827"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[ESTADO DE CAPITAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="21" width="545" height="33" uuid="82d61152-efd9-4702-b5cc-6494f8a2523c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHOCOLAT HUELIC]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="25" uuid="feceff5b-30eb-4fd8-a740-3e8726805043"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Del "+$P{inicio}+" al "+$P{fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="67" y="0" width="100" height="20" uuid="a037cd6f-2018-494d-8fac-96ef18f9d448"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rubro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="0" width="63" height="20" uuid="96acea50-72c9-48be-8269-d16cd309db61"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="68" height="20" uuid="be6b890e-75d9-4271-b8f8-7adf9be038e2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="40" y="19" width="480" height="1" uuid="d96b8ec9-f98d-4cf8-9748-11cc9f29be0b"/>
+			</line>
+			<staticText>
+				<reportElement x="67" y="20" width="100" height="20" uuid="c80fef3a-a251-48bf-959f-b33018b25f9f"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Inversiones]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="67" y="40" width="324" height="20" uuid="74d68ba2-a0e2-41ae-8ec2-c58ef345152b"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="c32be9e1-4ff5-4035-bf07-80f0d0544f13">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{inversion})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="324">
+						<textField>
+							<reportElement x="0" y="0" width="224" height="20" uuid="e2b114dc-5931-4e97-a322-4819351b7062"/>
+							<textElement verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{rubro}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="224" y="0" width="87" height="20" uuid="ef2b67ae-d189-44a9-befe-0e6d38f93713"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="68">
+			<staticText>
+				<reportElement x="67" y="28" width="100" height="20" uuid="63ded58c-08d9-4347-af54-304293dc4d16"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DesInversiones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="0" width="128" height="20" uuid="0518632c-af2a-411d-9c3d-db1705edd56f"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Inversiones]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="391" y="0" width="88" height="20" uuid="1df97d47-2ce1-4435-a7b6-a17a6a885c91"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_inversion}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="67" y="48" width="324" height="20" uuid="a075d73a-7905-42b6-b90e-3fbe6d476f3e"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="ec053780-9f31-40c9-bf5e-84762dcb2db8">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{desinversion})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="324">
+						<textField>
+							<reportElement x="0" y="0" width="224" height="20" uuid="45a2544f-8638-4126-9ed3-191f09f4b421"/>
+							<textElement verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{rubro}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="224" y="0" width="87" height="20" uuid="0c965575-8bbf-482d-a41d-6af63d12b1fc"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="73">
+			<staticText>
+				<reportElement x="67" y="0" width="128" height="20" uuid="c867dcc4-608e-45dc-97fe-ed0b115c7d04"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total desinversiones]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="391" y="0" width="88" height="20" uuid="415321b9-a355-4799-8edb-eb91420a4b84"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_desinversion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="30" width="88" height="20" uuid="bfd27b10-fc92-407c-8c10-01cd1b8d20b3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{capital_social}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="67" y="30" width="128" height="20" uuid="03561af3-bc5d-4a9a-99b9-dc7cc5a50736"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Capital Social]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

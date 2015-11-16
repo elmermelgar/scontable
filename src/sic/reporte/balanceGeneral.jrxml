@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="balanceGeneral" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e730290-aaa8-4625-bbac-c2566a196130">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="f25f2d8a-a632-4322-8339-7b9d5a069490">
+		<field name="cuenta" class="java.lang.String"/>
+		<field name="saldo" class="java.lang.Double"/>
+	</subDataset>
+	<parameter name="activos" class="java.util.List" isForPrompting="false"/>
+	<parameter name="pasivos" class="java.util.List" isForPrompting="false"/>
+	<parameter name="patrimonio" class="java.util.List" isForPrompting="false"/>
+	<parameter name="inicio" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="fin" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="total_pasivos" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="total_activos" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="total_pas_pat" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="total_patrimonio" class="java.lang.Double" isForPrompting="false"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="51" width="530" height="29" uuid="1f801106-aa31-434e-9465-2966f879d4bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[BALANCE GENERAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="19" width="530" height="33" uuid="99c5a8a3-887a-4b9d-a3e2-1196c4453b9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CHOCOLAT HUELIC]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="25" uuid="b042435f-fed5-4d30-8ecb-e735a4e5ecd4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Del "+$P{inicio}+" al "+$P{fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="63" y="0" width="100" height="20" uuid="41e01a49-831a-4255-95f7-1514ddfc3040"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Activos]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="63" y="20" width="429" height="21" uuid="2baa5fd7-0d6b-4e3c-8154-ec010516ff67"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="69bad173-17d5-40f4-bf16-e85cc84b75d4">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{activos})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="429">
+						<textField>
+							<reportElement x="0" y="0" width="320" height="20" uuid="72f9213b-8f73-40fa-b414-f1ffac6e3436"/>
+							<textElement verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{cuenta}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="334" y="0" width="93" height="20" uuid="c9e74ca7-5878-4e3c-aac4-968811088a03"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+		<band height="73">
+			<staticText>
+				<reportElement x="63" y="31" width="100" height="20" uuid="8a161c73-fc5e-40d3-b293-f8e02230018a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Pasivos]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="63" y="51" width="429" height="21" uuid="52c4552e-150e-435c-bf52-60eb5cd4e9f1"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="138e1a5e-eac5-452c-8c69-03fb1f72b990">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{pasivos})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="429">
+						<textField>
+							<reportElement x="0" y="1" width="317" height="20" uuid="1392f2c9-d16f-4fca-9c31-f7ce48c65678"/>
+							<textElement verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{cuenta}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="334" y="0" width="93" height="20" uuid="4dbb9425-2bc3-480d-9c4d-db2d7e483dd4"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="63" y="0" width="100" height="20" uuid="0ba0bf9d-bc9f-46b4-8d4c-ba7b9802e950"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Activos]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="0" width="93" height="20" uuid="ae2610f4-d065-4ebb-af42-50147424f9fd"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_activos}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="71">
+			<staticText>
+				<reportElement x="66" y="30" width="100" height="20" uuid="a2c7d02b-a796-40cf-adfe-a0a04936467c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Patrimonio]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="63" y="50" width="427" height="21" uuid="6425f514-e342-43aa-91c7-1193f878292d"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="2029d8b9-7265-4a69-bfc4-6b22c8fb3d48">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{patrimonio})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="427">
+						<textField>
+							<reportElement x="3" y="1" width="317" height="20" uuid="ab894ac4-91a7-4ec6-ad65-db265c014915"/>
+							<textElement verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{cuenta}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement x="334" y="0" width="93" height="20" uuid="02a4473e-200e-4e3a-a2bc-ef7e80228a17"/>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font size="12"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement x="66" y="0" width="100" height="20" uuid="73d550f4-5ecb-4167-8f5c-6d48578f400d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pasivos]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="0" width="93" height="20" uuid="abd2143b-8a73-4a3a-b42d-40c531b83dd5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_pasivos}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="60">
+			<staticText>
+				<reportElement x="63" y="0" width="100" height="20" uuid="8cc353c5-35c1-4124-8d94-ea870f3d1f46"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Patrimonio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="30" width="167" height="20" uuid="89ff8d06-f077-4f9d-8ffa-cb00c07e062d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Pasivos + Patrimonio]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="0" width="93" height="20" uuid="508e7f59-eac9-4dd9-b884-b89a93c5ee83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_patrimonio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="30" width="93" height="20" uuid="aa7e5a40-601d-48c9-b876-d8fa476d9d51"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_pas_pat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="43" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
