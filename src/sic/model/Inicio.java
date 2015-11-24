@@ -2271,7 +2271,7 @@ public class Inicio extends javax.swing.JFrame {
                         monto_haber += haber * IVA;
                     }
                     if (btn_iva_credito.isSelected()) {
-                        Transaccion iva_credito = new Transaccion(fecha, monto_debe, monto_haber, new CuentaDB().getCuenta("1161"), partida_actual);
+                        Transaccion iva_credito = new Transaccion(fecha, monto_debe, monto_haber, new CuentaDB().getCuenta("2228"), partida_actual);
                         model.getLibro_diario().add(iva_credito);
                     } else if (btn_iva_debito.isSelected()) {
                         Transaccion iva_credito = new Transaccion(fecha, monto_debe, monto_haber, new CuentaDB().getCuenta("2226"), partida_actual);
