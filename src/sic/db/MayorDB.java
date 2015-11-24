@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -372,10 +373,13 @@ public class MayorDB {
     public void mayorizarCuentas(Date inicio, Date fin) {
         Date fecha_hoy = new Date(new java.util.Date(System.currentTimeMillis()).getTime());
         //mayorizar activos
+        System.out.println("estoy en mayorizar cuentas ");
         List<Transaccion> activos = getActivos(inicio, fin);
         if (activos != null) {
             for (int i = 0; i < activos.size(); i++) {
                 // Calcular saldo final de cada cuenta
+                System.out.println("recorrido de activos");
+             System.out.println(Arrays.toString(activos.toArray()));
                 Double debe = activos.get(i).getDebe();
                 Double haber = activos.get(i).getHaber();
                 guardar(activos.get(i).getCuenta().getId_cuenta(), debe - haber, fecha_hoy);
@@ -454,14 +458,21 @@ public class MayorDB {
                     + "transaccion.id_cuenta ILIKE '1%' GROUP BY transaccion.id_cuenta "
                     + "ORDER BY transaccion.id_cuenta ASC;";
             PreparedStatement pst = Conexion.getConexion().prepareStatement(query);
+             System.out.println("estoy en get activos \n select de mayorizacion");
+//             System.out.println(pst);
             pst.setDate(1, inicio);
             pst.setDate(2, fin);
+            System.out.println(pst);
             ResultSet res = pst.executeQuery();
+             System.out.println("resultado del sql");
+             System.out.println(res);
             while (res.next()) {
+                System.out.println(res.getString("id_cuenta"));
                 Transaccion cuenta = new Transaccion();
                 cuenta.setCuenta(new CuentaDB().getCuenta(res.getString("id_cuenta")));
                 cuenta.setDebe(res.getDouble("saldo_debe"));
                 cuenta.setHaber(res.getDouble("saldo_haber"));
+              System.out.println(  cuenta);
                 cuentas.add(cuenta);
             }
 
