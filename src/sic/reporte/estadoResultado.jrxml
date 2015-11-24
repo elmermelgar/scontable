@@ -63,14 +63,7 @@ FROM
 	<title>
 		<band height="103" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="11" width="555" height="33" uuid="08afad42-3ea4-47b4-8a16-874a66f40dcc"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="26" isBold="true"/>
-				</textElement>
-				<text><![CDATA[CHOCOLAT HUELIC]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="44" width="555" height="29" uuid="5b274239-2033-4e5a-9ba3-15bf27a1d037"/>
+				<reportElement x="0" y="44" width="555" height="29" forecolor="#666600" uuid="5b274239-2033-4e5a-9ba3-15bf27a1d037"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18"/>
 				</textElement>
@@ -83,6 +76,16 @@ FROM
 				</textElement>
 				<textFieldExpression><![CDATA["Del "+$P{inicio}+" al "+$P{fin}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="2" y="10" width="551" height="33" forecolor="#FFFFFF" backcolor="#FFCC66" uuid="b081beea-f628-4fd4-9a2e-403a5783c8c0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="10" width="530" height="33" uuid="4116dcce-53bd-4c90-9b39-beb94ab60f6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CENTRO DE TECNOLOGÍA AGROINDUSTRIAL]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>

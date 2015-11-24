@@ -22,18 +22,21 @@
 	<title>
 		<band height="80" splitType="Stretch">
 			<staticText>
-				<reportElement x="12" y="51" width="530" height="29" uuid="1f801106-aa31-434e-9465-2966f879d4bd"/>
+				<reportElement x="12" y="51" width="530" height="29" forecolor="#666600" uuid="1f801106-aa31-434e-9465-2966f879d4bd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18"/>
 				</textElement>
 				<text><![CDATA[BALANCE GENERAL]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement x="2" y="18" width="551" height="33" forecolor="#FFFFFF" backcolor="#FFCC66" uuid="9eb96333-5bde-4a39-ad43-d7d61b9bd051"/>
+			</rectangle>
 			<staticText>
-				<reportElement x="12" y="19" width="530" height="33" uuid="99c5a8a3-887a-4b9d-a3e2-1196c4453b9d"/>
+				<reportElement x="13" y="18" width="530" height="33" uuid="99c5a8a3-887a-4b9d-a3e2-1196c4453b9d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="26" isBold="true"/>
+					<font size="18" isBold="true"/>
 				</textElement>
-				<text><![CDATA[CHOCOLAT HUELIC]]></text>
+				<text><![CDATA[CENTRO DE TECNOLOGÍA AGROINDUSTRIAL]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -62,7 +65,7 @@
 			</staticText>
 			<componentElement>
 				<reportElement x="63" y="20" width="429" height="21" uuid="2baa5fd7-0d6b-4e3c-8154-ec010516ff67"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="dataset1" uuid="69bad173-17d5-40f4-bf16-e85cc84b75d4">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{activos})]]></dataSourceExpression>
 					</datasetRun>
@@ -95,7 +98,7 @@
 			</staticText>
 			<componentElement>
 				<reportElement x="63" y="51" width="429" height="21" uuid="52c4552e-150e-435c-bf52-60eb5cd4e9f1"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="dataset1" uuid="138e1a5e-eac5-452c-8c69-03fb1f72b990">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{pasivos})]]></dataSourceExpression>
 					</datasetRun>
@@ -142,7 +145,7 @@
 			</staticText>
 			<componentElement>
 				<reportElement x="63" y="50" width="427" height="21" uuid="6425f514-e342-43aa-91c7-1193f878292d"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="dataset1" uuid="2029d8b9-7265-4a69-bfc4-6b22c8fb3d48">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{patrimonio})]]></dataSourceExpression>
 					</datasetRun>
