@@ -38,6 +38,7 @@
 	<parameter name="datos" class="java.util.List" isForPrompting="false"/>
 	<parameter name="saldo_debe" class="java.lang.Double" isForPrompting="false"/>
 	<parameter name="saldo_haber" class="java.lang.Double" isForPrompting="false"/>
+	<parameter name="logo" class="java.io.InputStream"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -51,14 +52,7 @@
 	<title>
 		<band height="103" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="11" width="555" height="33" uuid="08afad42-3ea4-47b4-8a16-874a66f40dcc"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="26" isBold="true"/>
-				</textElement>
-				<text><![CDATA[CHOCOLAT HUELIC]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="0" y="44" width="555" height="29" uuid="5b274239-2033-4e5a-9ba3-15bf27a1d037"/>
+				<reportElement x="0" y="44" width="555" height="29" forecolor="#666600" uuid="5b274239-2033-4e5a-9ba3-15bf27a1d037"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="18"/>
 				</textElement>
@@ -71,6 +65,16 @@
 				</textElement>
 				<textFieldExpression><![CDATA["Del "+$P{inicio}+" al "+$P{fin}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="0" y="0" width="551" height="33" forecolor="#FFFFFF" backcolor="#FFCC66" uuid="c7114cb9-68a6-4f45-bb34-e069f4f312b7"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="5" width="551" height="33" uuid="c5e86cad-6215-486e-a169-93b0b3bf65aa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Franklin Gothic Demi" size="20"/>
+				</textElement>
+				<text><![CDATA[CENTRO DE TECNOLOGÍA AGROINDUSTRIAL]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>
@@ -108,7 +112,7 @@
 		<band height="23" splitType="Stretch">
 			<componentElement>
 				<reportElement x="0" y="1" width="523" height="20" uuid="482e8ad3-7192-424d-9542-90ffe7d1beac"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="dataset1" uuid="ebda0b6f-6f8c-4af3-9a8e-f608980483be">
 						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{datos})]]></dataSourceExpression>
 					</datasetRun>
