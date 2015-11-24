@@ -2353,8 +2353,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel20" min="-2" pref="82" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="panel_mision" min="-2" pref="223" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="panel_vision" min="-2" pref="223" max="-2" attributes="0"/>
@@ -2531,11 +2531,14 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel20">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="99" green="cc" red="ff" type="rgb"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Times New Roman" size="30" style="1"/>
+                  <Font name="Arial Narrow" size="30" style="1"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="CHOCOLAT HUELIC"/>
+                <Property name="text" type="java.lang.String" value="CENTRO DE TECNOLOG&#xcd;A AGROINDUSTRIAL"/>
               </Properties>
             </Component>
           </SubComponents>

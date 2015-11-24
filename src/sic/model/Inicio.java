@@ -995,9 +995,11 @@ public class Inicio extends javax.swing.JFrame {
         });
         tabla_planilla.getTableHeader().setReorderingAllowed(false);
         scroll_tabla_planilla.setViewportView(tabla_planilla);
-        tabla_planilla.getColumnModel().getColumn(0).setMinWidth(250);
-        tabla_planilla.getColumnModel().getColumn(1).setMinWidth(90);
-        tabla_planilla.getColumnModel().getColumn(8).setMinWidth(80);
+        if (tabla_planilla.getColumnModel().getColumnCount() > 0) {
+            tabla_planilla.getColumnModel().getColumn(0).setMinWidth(250);
+            tabla_planilla.getColumnModel().getColumn(1).setMinWidth(90);
+            tabla_planilla.getColumnModel().getColumn(8).setMinWidth(80);
+        }
 
         btn_planilla_registrar.setText("Registrar la planilla");
 
@@ -1700,9 +1702,10 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(107, 107, 107))
         );
 
-        jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 30)); // NOI18N
+        jLabel20.setBackground(new java.awt.Color(255, 204, 153));
+        jLabel20.setFont(new java.awt.Font("Arial Narrow", 1, 30)); // NOI18N
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("CHOCOLAT HUELIC");
+        jLabel20.setText("CENTRO DE TECNOLOGÍA AGROINDUSTRIAL");
 
         javax.swing.GroupLayout panel_inicioLayout = new javax.swing.GroupLayout(panel_inicio);
         panel_inicio.setLayout(panel_inicioLayout);
@@ -1720,8 +1723,8 @@ public class Inicio extends javax.swing.JFrame {
             panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel20)
-                .addGap(18, 18, 18)
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_mision, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(panel_vision, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
