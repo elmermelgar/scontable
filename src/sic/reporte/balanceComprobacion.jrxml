@@ -38,7 +38,6 @@
 	<parameter name="datos" class="java.util.List" isForPrompting="false"/>
 	<parameter name="saldo_debe" class="java.lang.Double" isForPrompting="false"/>
 	<parameter name="saldo_haber" class="java.lang.Double" isForPrompting="false"/>
-	<parameter name="logo" class="java.io.InputStream"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -51,13 +50,6 @@
 	</background>
 	<title>
 		<band height="103" splitType="Stretch">
-			<staticText>
-				<reportElement x="0" y="44" width="555" height="29" forecolor="#666600" uuid="5b274239-2033-4e5a-9ba3-15bf27a1d037"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="18"/>
-				</textElement>
-				<text><![CDATA[BALANCE DE COMPROBACIÓN]]></text>
-			</staticText>
 			<textField>
 				<reportElement x="0" y="73" width="555" height="25" uuid="1036d59b-b588-4293-a324-73a106f49fa9"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -65,13 +57,20 @@
 				</textElement>
 				<textFieldExpression><![CDATA["Del "+$P{inicio}+" al "+$P{fin}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="12" y="43" width="530" height="29" forecolor="#666600" uuid="547c4666-4fcc-43bf-a8d9-65b96f4142f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[BALANCE DE COMPROBACIÓN]]></text>
+			</staticText>
 			<rectangle>
-				<reportElement x="0" y="0" width="551" height="33" forecolor="#FFFFFF" backcolor="#FFCC66" uuid="c7114cb9-68a6-4f45-bb34-e069f4f312b7"/>
+				<reportElement x="2" y="10" width="551" height="33" forecolor="#FFFFFF" backcolor="#FFCC66" uuid="91711243-bf2a-4f10-87bd-fd5812fb01df"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="0" y="5" width="551" height="33" uuid="c5e86cad-6215-486e-a169-93b0b3bf65aa"/>
-				<textElement textAlignment="Center">
-					<font fontName="Franklin Gothic Demi" size="20"/>
+				<reportElement x="13" y="10" width="530" height="33" uuid="9826b207-81d5-4b09-a9f0-c76905db53c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[CENTRO DE TECNOLOGÍA AGROINDUSTRIAL]]></text>
 			</staticText>
