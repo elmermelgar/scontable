@@ -5,6 +5,7 @@
 package sic.model;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 /**
  *
@@ -33,7 +34,18 @@ public class Transaccion {
     public Integer getId_transaccion() {
         return id_transaccion;
     }
-
+        
+ public ArrayList getAll() {
+        ArrayList all = new  ArrayList();
+       all.add(this.id_transaccion) ;
+       all.add(this.fecha_tran) ;
+       all.add(this.debe ) ;
+       all.add(this.haber) ;
+       all.add(this.cuenta ) ;
+       all.add(this.partida) ;
+       
+        return all;
+    }
     public void setId_transaccion(Integer id_transaccion) {
         this.id_transaccion = id_transaccion;
     }

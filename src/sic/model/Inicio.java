@@ -386,6 +386,14 @@ public class Inicio extends javax.swing.JFrame {
         crud_catalogo_cuentas.getContentPane().add(jPanel2);
         jPanel2.setBounds(502, 30, 280, 354);
 
+        tabla_crud_catalogo_cuentas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
         scroll_tabla_crud_catalogo_cuentas.setViewportView(tabla_crud_catalogo_cuentas);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1995,11 +2003,28 @@ public class Inicio extends javax.swing.JFrame {
         crud_libro_diario.setVisible(true);
         t_crud_libro_diario_numero.setEditable(true);
 
+//        CuentaListModel listModel = new CuentaListModel();
+//        CuentaDB db = new CuentaDB();
+//        listModel.setCuentas(db.getCuentas());
+//        lista_cuentas.setModel(listModel);
+//        lista_cuentas.repaint();
+        
+        
+        
         CuentaListModel listModel = new CuentaListModel();
         CuentaDB db = new CuentaDB();
+        System.err.println(db.getCuentas().toString());
         listModel.setCuentas(db.getCuentas());
         lista_cuentas.setModel(listModel);
         lista_cuentas.repaint();
+        
+        
+        
+        
+        
+        
+        
+        
 
         LibroDiarioTM ldtm = new LibroDiarioTM();
         tabla_crud_libro_diario_partida.setModel(ldtm);
@@ -2332,12 +2357,16 @@ public class Inicio extends javax.swing.JFrame {
 
         start_date = new Date(btn_dlg_fecha_inicio.getDate().getTime());
         end_date = new Date(btn_dlg_fecha_fin.getDate().getTime());
-
+        
+        System.out.println(start_date + " fin : " + end_date );
+        
         if (MAYORIZACION) {
+            System.out.println("mayo is true");
             dlg_periodo.dispose();
             MayorDB mdb = new MayorDB();
             mdb.mayorizarCuentas(start_date, end_date);
         } else {
+            System.out.println("mayo is falce");
             int index = btn_estados_financieros.getSelectedIndex();
             switch (index) {
                 case BALANCE_COMPROBACION:

@@ -13,6 +13,7 @@ public class Cuenta {
     private String id_cuenta;
     private String nombre_cuenta;
     private String tipo_cuenta;
+//    private String cuenta;
 
     public Cuenta() {
     }
@@ -43,7 +44,7 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return id_cuenta+" "+nombre_cuenta;
+        return id_cuenta + " "+tipo_cuenta+" " +  nombre_cuenta ;
     }
     
     
