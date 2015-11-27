@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import sic.db.BCReport;
 import sic.db.BGReport;
 import sic.db.CuentaDB;
@@ -55,8 +56,8 @@ public class Inicio extends javax.swing.JFrame {
         initComponents();
 
         dlg_periodo.setLocation(400, 300);
-        panel_crud_catalogo.setVisible(false);
-        panel_crud_libro_diario.setVisible(false);
+        setVisible(false);
+        setVisible(false);
 
     }
 
@@ -89,6 +90,7 @@ public class Inicio extends javax.swing.JFrame {
         scroll_tabla_crud_catalogo_cuentas = new javax.swing.JScrollPane();
         tabla_crud_catalogo_cuentas = new javax.swing.JTable();
         btn_crud_catalogo_salir = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         crud_libro_diario = new javax.swing.JDialog(this);
         jPanel3 = new javax.swing.JPanel();
         scroll_tabla_crud_libro_diario_partida = new javax.swing.JScrollPane();
@@ -115,6 +117,7 @@ public class Inicio extends javax.swing.JFrame {
         btn_iva_credito = new javax.swing.JRadioButton();
         btn_iva_exento = new javax.swing.JRadioButton();
         btn_iva_debito = new javax.swing.JRadioButton();
+        jLabel13 = new javax.swing.JLabel();
         dlg_periodo = new javax.swing.JDialog(this);
         lbl_periodo = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -221,37 +224,42 @@ public class Inicio extends javax.swing.JFrame {
         btn_group_iva = new javax.swing.ButtonGroup();
         btn_salir = new javax.swing.JButton();
         tab_pane = new javax.swing.JTabbedPane();
+        panel_inicio = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         panel_cont_general = new javax.swing.JPanel();
         btn_libro_diario = new javax.swing.JButton();
         btn_catalogo = new javax.swing.JButton();
         btn_estados_financieros = new javax.swing.JComboBox();
         btn_reporte = new javax.swing.JButton();
+        btn_modificar_partida = new javax.swing.JButton();
+        btn_agregar_cuenta = new javax.swing.JButton();
+        btn_nueva_partida = new javax.swing.JButton();
         scroll_tabla = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
-        panel_crud_libro_diario = new javax.swing.JPanel();
-        btn_nueva_partida = new javax.swing.JButton();
-        btn_modificar_partida = new javax.swing.JButton();
-        panel_crud_catalogo = new javax.swing.JPanel();
-        btn_agregar_cuenta = new javax.swing.JButton();
         msg_tabla_operacion = new javax.swing.JLabel();
         btn_mayorizar = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         centro_costos = new javax.swing.JPanel();
         btn_planilla = new javax.swing.JButton();
         btn_empleados = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         btn_proceso1 = new javax.swing.JButton();
         btn_proceso1_cedula = new javax.swing.JButton();
-        panel_inicio = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         crud_catalogo_cuentas.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         crud_catalogo_cuentas.setTitle("Catálogo de Cuentas");
         crud_catalogo_cuentas.setMinimumSize(new java.awt.Dimension(800, 460));
         crud_catalogo_cuentas.setResizable(false);
+        crud_catalogo_cuentas.getContentPane().setLayout(null);
 
         jLabel1.setText("CATALOGO DE CUENTAS");
+        crud_catalogo_cuentas.getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 11, 120, 14);
 
         btn_cuenta_nueva.setText("Nueva Cuenta");
         btn_cuenta_nueva.addActionListener(new java.awt.event.ActionListener() {
@@ -310,7 +318,7 @@ public class Inicio extends javax.swing.JFrame {
                                 .addComponent(jLabel3)))
                         .addGap(6, 6, 6)
                         .addGroup(panel_cuenta_crudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2)
                             .addComponent(t_tipo_cuenta, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(t_id_cuenta, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_cuenta_crudLayout.createSequentialGroup()
@@ -349,7 +357,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(btn_cuenta_nueva)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(btn_cuenta_modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -369,11 +377,14 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btn_cuenta_nueva)
                     .addComponent(btn_cuenta_modificar))
                 .addGap(12, 12, 12)
-                .addComponent(msg_cuenta_operacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(msg_cuenta_operacion, javax.swing.GroupLayout.DEFAULT_SIZE, 11, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panel_cuenta_crud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52))
         );
+
+        crud_catalogo_cuentas.getContentPane().add(jPanel2);
+        jPanel2.setBounds(502, 30, 280, 354);
 
         tabla_crud_catalogo_cuentas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -402,47 +413,22 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        crud_catalogo_cuentas.getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 31, 480, 354);
+
+        btn_crud_catalogo_salir.setBackground(new java.awt.Color(255, 204, 204));
         btn_crud_catalogo_salir.setText("Salir");
         btn_crud_catalogo_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_crud_catalogo_salirActionPerformed(evt);
             }
         });
+        crud_catalogo_cuentas.getContentPane().add(btn_crud_catalogo_salir);
+        btn_crud_catalogo_salir.setBounds(370, 393, 70, 30);
 
-        javax.swing.GroupLayout crud_catalogo_cuentasLayout = new javax.swing.GroupLayout(crud_catalogo_cuentas.getContentPane());
-        crud_catalogo_cuentas.getContentPane().setLayout(crud_catalogo_cuentasLayout);
-        crud_catalogo_cuentasLayout.setHorizontalGroup(
-            crud_catalogo_cuentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(crud_catalogo_cuentasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(crud_catalogo_cuentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(crud_catalogo_cuentasLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crud_catalogo_cuentasLayout.createSequentialGroup()
-                        .addGroup(crud_catalogo_cuentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(crud_catalogo_cuentasLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btn_crud_catalogo_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(crud_catalogo_cuentasLayout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(13, 13, 13))))
-        );
-        crud_catalogo_cuentasLayout.setVerticalGroup(
-            crud_catalogo_cuentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(crud_catalogo_cuentasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(crud_catalogo_cuentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_crud_catalogo_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aero_background-wallpaper-1280x768.jpg"))); // NOI18N
+        crud_catalogo_cuentas.getContentPane().add(jLabel14);
+        jLabel14.setBounds(0, 0, 850, 500);
 
         crud_libro_diario.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         crud_libro_diario.setTitle("Libro Diario");
@@ -450,6 +436,7 @@ public class Inicio extends javax.swing.JFrame {
         crud_libro_diario.setMinimumSize(new java.awt.Dimension(800, 590));
         crud_libro_diario.setName("Libro Diario"); // NOI18N
         crud_libro_diario.setResizable(false);
+        crud_libro_diario.getContentPane().setLayout(null);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Partida", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 12))); // NOI18N
 
@@ -490,39 +477,43 @@ public class Inicio extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(msg_crud_libro_diario_partida_operacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(msg_crud_libro_diario_partida_operacion, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(btn_crud_libro_diario_cancelar_partida)
                         .addGap(18, 18, 18)
                         .addComponent(btn_crud_libro_diario_guardar_partida))
-                    .addComponent(scroll_tabla_crud_libro_diario_partida, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(scroll_tabla_crud_libro_diario_partida))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(scroll_tabla_crud_libro_diario_partida, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(scroll_tabla_crud_libro_diario_partida, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(msg_crud_libro_diario_partida_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(msg_crud_libro_diario_partida_operacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btn_crud_libro_diario_cancelar_partida)
                         .addComponent(btn_crud_libro_diario_guardar_partida)))
                 .addGap(238, 238, 238))
         );
 
+        crud_libro_diario.getContentPane().add(jPanel3);
+        jPanel3.setBounds(10, 280, 780, 231);
+
+        btn_crud_libro_diario_salir.setBackground(new java.awt.Color(255, 204, 204));
         btn_crud_libro_diario_salir.setText("Salir");
         btn_crud_libro_diario_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_crud_libro_diario_salirActionPerformed(evt);
             }
         });
+        crud_libro_diario.getContentPane().add(btn_crud_libro_diario_salir);
+        btn_crud_libro_diario_salir.setBounds(375, 520, 90, 30);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Transacción", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12))); // NOI18N
 
@@ -610,18 +601,11 @@ public class Inicio extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(btn_crud_libro_diario_cuenta_reset)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn_crud_libro_diario_cuenta_agregar))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel7)
                                     .addComponent(jLabel6)
@@ -632,12 +616,21 @@ public class Inicio extends javax.swing.JFrame {
                                     .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(t_crud_libro_diario_debe)
                                     .addComponent(t_crud_libro_diario_haber)
-                                    .addComponent(t_crud_libro_diario_fecha, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                                    .addComponent(t_crud_libro_diario_fecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel4Layout.createSequentialGroup()
                                         .addComponent(t_crud_libro_diario_numero, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(79, 79, 79)
+                                .addComponent(btn_crud_libro_diario_cuenta_reset)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btn_crud_libro_diario_cuenta_agregar)
+                                .addGap(4, 4, 4)))
                         .addGap(19, 19, 19))
-                    .addComponent(msg_crud_libro_diario_cuenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(msg_crud_libro_diario_cuenta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -671,31 +664,12 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout crud_libro_diarioLayout = new javax.swing.GroupLayout(crud_libro_diario.getContentPane());
-        crud_libro_diario.getContentPane().setLayout(crud_libro_diarioLayout);
-        crud_libro_diarioLayout.setHorizontalGroup(
-            crud_libro_diarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crud_libro_diarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(crud_libro_diarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(crud_libro_diarioLayout.createSequentialGroup()
-                        .addGap(0, 681, Short.MAX_VALUE)
-                        .addComponent(btn_crud_libro_diario_salir)))
-                .addContainerGap())
-        );
-        crud_libro_diarioLayout.setVerticalGroup(
-            crud_libro_diarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(crud_libro_diarioLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_crud_libro_diario_salir)
-                .addGap(12, 12, 12))
-        );
+        crud_libro_diario.getContentPane().add(jPanel4);
+        jPanel4.setBounds(10, 10, 780, 0);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aero_background-wallpaper-1280x768.jpg"))); // NOI18N
+        crud_libro_diario.getContentPane().add(jLabel13);
+        jLabel13.setBounds(-70, -50, 1250, 710);
 
         dlg_periodo.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         dlg_periodo.setMinimumSize(new java.awt.Dimension(410, 250));
@@ -1600,6 +1574,46 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
+        tab_pane.setToolTipText("");
+        tab_pane.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        panel_inicio.setLayout(null);
+
+        jLabel20.setBackground(new java.awt.Color(255, 204, 153));
+        jLabel20.setFont(new java.awt.Font("Cooper Std Black", 1, 30)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("SISTEMA CONTABLE");
+        panel_inicio.add(jLabel20);
+        jLabel20.setBounds(2, 437, 1170, 82);
+
+        jLabel45.setBackground(new java.awt.Color(255, 204, 153));
+        jLabel45.setFont(new java.awt.Font("Cooper Std Black", 1, 30)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel45.setText("SISTEMA CONTABLE");
+        panel_inicio.add(jLabel45);
+        jLabel45.setBounds(0, 440, 1170, 82);
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo.png"))); // NOI18N
+        panel_inicio.add(jLabel43);
+        jLabel43.setBounds(360, 200, 418, 197);
+
+        jLabel44.setBackground(new java.awt.Color(255, 204, 153));
+        jLabel44.setFont(new java.awt.Font("Arial Narrow", 1, 30)); // NOI18N
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("CENTRO DE TECNOLOGÍA AGROINDUSTRIAL");
+        panel_inicio.add(jLabel44);
+        jLabel44.setBounds(0, 80, 1140, 82);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aero_background-wallpaper-1280x768.jpg"))); // NOI18N
+        panel_inicio.add(jLabel5);
+        jLabel5.setBounds(-100, 0, 1270, 540);
+
+        tab_pane.addTab("Inicio", panel_inicio);
+
+        panel_cont_general.setLayout(null);
+
         btn_libro_diario.setText("Libro Diario");
         btn_libro_diario.setDefaultCapable(false);
         btn_libro_diario.addActionListener(new java.awt.event.ActionListener() {
@@ -1607,6 +1621,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_libro_diarioActionPerformed(evt);
             }
         });
+        panel_cont_general.add(btn_libro_diario);
+        btn_libro_diario.setBounds(10, 10, 120, 30);
 
         btn_catalogo.setText("Catálogo de cuentas");
         btn_catalogo.addActionListener(new java.awt.event.ActionListener() {
@@ -1614,6 +1630,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_catalogoActionPerformed(evt);
             }
         });
+        panel_cont_general.add(btn_catalogo);
+        btn_catalogo.setBounds(150, 10, 170, 30);
 
         btn_estados_financieros.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Estados Financieros...", "Balance de Comprobación", "Estado de Resultado", "Estado de Capital", "Balance General" }));
         btn_estados_financieros.addItemListener(new java.awt.event.ItemListener() {
@@ -1621,6 +1639,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_estados_financierosItemStateChanged(evt);
             }
         });
+        panel_cont_general.add(btn_estados_financieros);
+        btn_estados_financieros.setBounds(740, 10, 277, 30);
 
         btn_reporte.setText("Reporte");
         btn_reporte.setEnabled(false);
@@ -1629,15 +1649,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_reporteActionPerformed(evt);
             }
         });
-
-        scroll_tabla.setViewportView(tabla);
-
-        btn_nueva_partida.setText("Registrar Transacción");
-        btn_nueva_partida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_nueva_partidaActionPerformed(evt);
-            }
-        });
+        panel_cont_general.add(btn_reporte);
+        btn_reporte.setBounds(1040, 10, 90, 30);
 
         btn_modificar_partida.setText("Editar Partida");
         btn_modificar_partida.addActionListener(new java.awt.event.ActionListener() {
@@ -1645,27 +1658,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_modificar_partidaActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout panel_crud_libro_diarioLayout = new javax.swing.GroupLayout(panel_crud_libro_diario);
-        panel_crud_libro_diario.setLayout(panel_crud_libro_diarioLayout);
-        panel_crud_libro_diarioLayout.setHorizontalGroup(
-            panel_crud_libro_diarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_crud_libro_diarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_nueva_partida)
-                .addGap(18, 18, 18)
-                .addComponent(btn_modificar_partida)
-                .addContainerGap(251, Short.MAX_VALUE))
-        );
-        panel_crud_libro_diarioLayout.setVerticalGroup(
-            panel_crud_libro_diarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_crud_libro_diarioLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panel_crud_libro_diarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_nueva_partida)
-                    .addComponent(btn_modificar_partida))
-                .addContainerGap())
-        );
+        panel_cont_general.add(btn_modificar_partida);
+        btn_modificar_partida.setBounds(260, 460, 194, 40);
 
         btn_agregar_cuenta.setText("Administrar Catálogo");
         btn_agregar_cuenta.addActionListener(new java.awt.event.ActionListener() {
@@ -1673,28 +1667,29 @@ public class Inicio extends javax.swing.JFrame {
                 btn_agregar_cuentaActionPerformed(evt);
             }
         });
+        panel_cont_general.add(btn_agregar_cuenta);
+        btn_agregar_cuenta.setBounds(970, 460, 160, 40);
 
-        javax.swing.GroupLayout panel_crud_catalogoLayout = new javax.swing.GroupLayout(panel_crud_catalogo);
-        panel_crud_catalogo.setLayout(panel_crud_catalogoLayout);
-        panel_crud_catalogoLayout.setHorizontalGroup(
-            panel_crud_catalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_crud_catalogoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_agregar_cuenta)
-                .addContainerGap())
-        );
-        panel_crud_catalogoLayout.setVerticalGroup(
-            panel_crud_catalogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_crud_catalogoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_agregar_cuenta)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        btn_nueva_partida.setText("Registrar Transacción");
+        btn_nueva_partida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_nueva_partidaActionPerformed(evt);
+            }
+        });
+        panel_cont_general.add(btn_nueva_partida);
+        btn_nueva_partida.setBounds(20, 460, 164, 40);
+
+        scroll_tabla.setViewportView(tabla);
+
+        panel_cont_general.add(scroll_tabla);
+        scroll_tabla.setBounds(10, 50, 1120, 360);
 
         msg_tabla_operacion.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         msg_tabla_operacion.setMaximumSize(new java.awt.Dimension(40, 20));
         msg_tabla_operacion.setMinimumSize(new java.awt.Dimension(40, 20));
         msg_tabla_operacion.setPreferredSize(new java.awt.Dimension(40, 20));
+        panel_cont_general.add(msg_tabla_operacion);
+        msg_tabla_operacion.setBounds(1340, 796, 668, 20);
 
         btn_mayorizar.setText("Mayorizar");
         btn_mayorizar.addActionListener(new java.awt.event.ActionListener() {
@@ -1702,58 +1697,16 @@ public class Inicio extends javax.swing.JFrame {
                 btn_mayorizarActionPerformed(evt);
             }
         });
+        panel_cont_general.add(btn_mayorizar);
+        btn_mayorizar.setBounds(340, 10, 110, 30);
 
-        javax.swing.GroupLayout panel_cont_generalLayout = new javax.swing.GroupLayout(panel_cont_general);
-        panel_cont_general.setLayout(panel_cont_generalLayout);
-        panel_cont_generalLayout.setHorizontalGroup(
-            panel_cont_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_cont_generalLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(msg_tabla_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(183, 183, 183))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_cont_generalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panel_cont_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(scroll_tabla)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_cont_generalLayout.createSequentialGroup()
-                        .addComponent(btn_libro_diario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_catalogo)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_mayorizar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_estados_financieros, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_reporte))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_cont_generalLayout.createSequentialGroup()
-                        .addComponent(panel_crud_libro_diario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(panel_crud_catalogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(4, 4, 4)))
-                .addContainerGap())
-        );
-        panel_cont_generalLayout.setVerticalGroup(
-            panel_cont_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_cont_generalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panel_cont_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_libro_diario)
-                    .addComponent(btn_catalogo)
-                    .addComponent(btn_estados_financieros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_reporte)
-                    .addComponent(btn_mayorizar))
-                .addGap(14, 14, 14)
-                .addComponent(scroll_tabla, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(msg_tabla_operacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel_cont_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panel_crud_libro_diario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panel_crud_catalogo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
-        );
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aero_background-wallpaper-1280x768.jpg"))); // NOI18N
+        panel_cont_general.add(jLabel12);
+        jLabel12.setBounds(-90, 0, 1280, 540);
 
         tab_pane.addTab("Contabilidad General", null, panel_cont_general, "");
+
+        centro_costos.setLayout(null);
 
         btn_planilla.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btn_planilla.setText("Planilla");
@@ -1762,6 +1715,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_planillaActionPerformed(evt);
             }
         });
+        centro_costos.add(btn_planilla);
+        btn_planilla.setBounds(40, 52, 100, 35);
 
         btn_empleados.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btn_empleados.setText("Empleados");
@@ -1770,6 +1725,8 @@ public class Inicio extends javax.swing.JFrame {
                 btn_empleadosActionPerformed(evt);
             }
         });
+        centro_costos.add(btn_empleados);
+        btn_empleados.setBounds(193, 52, 100, 35);
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Departamentos"));
 
@@ -1808,100 +1765,36 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout centro_costosLayout = new javax.swing.GroupLayout(centro_costos);
-        centro_costos.setLayout(centro_costosLayout);
-        centro_costosLayout.setHorizontalGroup(
-            centro_costosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(centro_costosLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(centro_costosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(centro_costosLayout.createSequentialGroup()
-                        .addComponent(btn_planilla, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(btn_empleados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(460, Short.MAX_VALUE))
-        );
-        centro_costosLayout.setVerticalGroup(
-            centro_costosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(centro_costosLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(centro_costosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_planilla, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_empleados, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(243, Short.MAX_VALUE))
-        );
+        centro_costos.add(jPanel7);
+        jPanel7.setBounds(660, 60, 386, 161);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aero_background-wallpaper-1280x768.jpg"))); // NOI18N
+        centro_costos.add(jLabel15);
+        jLabel15.setBounds(0, 0, 1280, 768);
 
         tab_pane.addTab("Centro de Costos", centro_costos);
-
-        jLabel20.setBackground(new java.awt.Color(255, 204, 153));
-        jLabel20.setFont(new java.awt.Font("Cooper Std Black", 1, 30)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(102, 102, 0));
-        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel20.setText("SISTEMA CONTABLE");
-
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sic/model/12285926_10205472504960551_648129068_n.jpg"))); // NOI18N
-
-        jLabel44.setBackground(new java.awt.Color(255, 204, 153));
-        jLabel44.setFont(new java.awt.Font("Arial Narrow", 1, 30)); // NOI18N
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("CENTRO DE TECNOLOGÍA AGROINDUSTRIAL");
-
-        javax.swing.GroupLayout panel_inicioLayout = new javax.swing.GroupLayout(panel_inicio);
-        panel_inicio.setLayout(panel_inicioLayout);
-        panel_inicioLayout.setHorizontalGroup(
-            panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
-                .addContainerGap(255, Short.MAX_VALUE)
-                .addComponent(jLabel43)
-                .addGap(213, 213, 213))
-            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_inicioLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        panel_inicioLayout.setVerticalGroup(
-            panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_inicioLayout.createSequentialGroup()
-                .addContainerGap(142, Short.MAX_VALUE)
-                .addComponent(jLabel43)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83))
-            .addGroup(panel_inicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(panel_inicioLayout.createSequentialGroup()
-                    .addGap(64, 64, 64)
-                    .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(389, Short.MAX_VALUE)))
-        );
-
-        tab_pane.addTab("Inicio", panel_inicio);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(504, Short.MAX_VALUE)
+                .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(502, 502, 502))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tab_pane)
-                .addGap(22, 22, 22))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(377, 377, 377)
-                .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tab_pane, javax.swing.GroupLayout.PREFERRED_SIZE, 563, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4))
+                .addGap(9, 9, 9))
         );
 
         tab_pane.getAccessibleContext().setAccessibleName("tabpane");
@@ -1918,8 +1811,8 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btn_libro_diarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_libro_diarioActionPerformed
 
-        panel_crud_catalogo.setVisible(false);
-        panel_crud_libro_diario.setVisible(true);
+        setVisible(false);
+        setVisible(true);
 
         tabla.setModel(libroDiarioTM);
         tabla.setColumnModel(libroDiarioTM.getColumnModel());
@@ -1932,8 +1825,8 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btn_catalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_catalogoActionPerformed
 
-        panel_crud_libro_diario.setVisible(false);
-        panel_crud_catalogo.setVisible(true);
+        setVisible(false);
+        setVisible(true);
         tabla.setModel(catalogoCuentasTM);
         tabla.setColumnModel(catalogoCuentasTM.getColumnModel());
         CuentaDB cuenta = new CuentaDB();
@@ -2450,6 +2343,7 @@ public class Inicio extends javax.swing.JFrame {
         btn_dlg_fecha_inicio.setDate(null);
         btn_dlg_fecha_fin.setDate(null);
         dlg_periodo.setVisible(true);
+        
 
     }//GEN-LAST:event_btn_mayorizarActionPerformed
 
@@ -2763,6 +2657,10 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -2791,8 +2689,10 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -2827,8 +2727,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel msg_dpto_1;
     private javax.swing.JLabel msg_tabla_operacion;
     private javax.swing.JPanel panel_cont_general;
-    private javax.swing.JPanel panel_crud_catalogo;
-    private javax.swing.JPanel panel_crud_libro_diario;
     private javax.swing.JPanel panel_cuenta_crud;
     private javax.swing.JPanel panel_empleado_datos;
     private javax.swing.JPanel panel_inicio;
