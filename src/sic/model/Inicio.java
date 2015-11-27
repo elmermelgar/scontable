@@ -2469,6 +2469,7 @@ public class Inicio extends javax.swing.JFrame {
         if (MAYORIZACION) {
             System.out.println("mayo is true");
             dlg_periodo.dispose();
+            
             MayorDB mdb = new MayorDB();
             mdb.mayorizarCuentas(start_date, end_date);
         } else {

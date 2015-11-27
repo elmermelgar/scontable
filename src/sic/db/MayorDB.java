@@ -373,6 +373,16 @@ public class MayorDB {
     }
 
     public void mayorizarCuentas(Date inicio, Date fin) {
+         try {
+             String sql = "DELETE FROM mayor";
+            PreparedStatement pst = Conexion.getConexion().prepareStatement(sql);
+             pst.execute();
+        } catch (Exception e) {
+        }
+  
+        
+        
+        
         Date fecha_hoy = new Date(new java.util.Date(System.currentTimeMillis()).getTime());
         //mayorizar activos
         System.out.println("estoy en mayorizar cuentas ");
