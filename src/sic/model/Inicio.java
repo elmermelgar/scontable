@@ -259,7 +259,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel1.setText("CATALOGO DE CUENTAS");
         crud_catalogo_cuentas.getContentPane().add(jLabel1);
-        jLabel1.setBounds(10, 11, 120, 14);
+        jLabel1.setBounds(10, 11, 230, 14);
 
         btn_cuenta_nueva.setText("Nueva Cuenta");
         btn_cuenta_nueva.addActionListener(new java.awt.event.ActionListener() {
@@ -480,12 +480,12 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(msg_crud_libro_diario_partida_operacion, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
+                        .addComponent(msg_crud_libro_diario_partida_operacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(btn_crud_libro_diario_cancelar_partida)
                         .addGap(18, 18, 18)
                         .addComponent(btn_crud_libro_diario_guardar_partida))
-                    .addComponent(scroll_tabla_crud_libro_diario_partida))
+                    .addComponent(scroll_tabla_crud_libro_diario_partida, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -621,7 +621,7 @@ public class Inicio extends javax.swing.JFrame {
                                         .addComponent(t_crud_libro_diario_numero, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
+                                .addGap(78, 78, 78)
                                 .addComponent(btn_crud_libro_diario_cuenta_reset)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btn_crud_libro_diario_cuenta_agregar)
@@ -656,11 +656,15 @@ public class Inicio extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(msg_crud_libro_diario_cuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_crud_libro_diario_cuenta_agregar)
-                            .addComponent(btn_crud_libro_diario_cuenta_reset))))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(msg_crud_libro_diario_cuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_crud_libro_diario_cuenta_reset)
+                                    .addComponent(btn_crud_libro_diario_cuenta_agregar))
+                                .addGap(8, 8, 8)))))
                 .addContainerGap())
         );
 

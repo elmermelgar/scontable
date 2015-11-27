@@ -25,7 +25,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="11" width="-1" height="-1"/>
+              <AbsoluteConstraints x="10" y="11" width="230" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -364,13 +364,13 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="msg_crud_libro_diario_partida_operacion" pref="556" max="32767" attributes="0"/>
+                              <Component id="msg_crud_libro_diario_partida_operacion" max="32767" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btn_crud_libro_diario_cancelar_partida" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                               <Component id="btn_crud_libro_diario_guardar_partida" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="scroll_tabla_crud_libro_diario_partida" alignment="0" max="32767" attributes="0"/>
+                          <Component id="scroll_tabla_crud_libro_diario_partida" alignment="0" pref="758" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -502,7 +502,7 @@
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                       <Component id="btn_crud_libro_diario_cuenta_reset" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="btn_crud_libro_diario_cuenta_agregar" min="-2" max="-2" attributes="0"/>
@@ -547,11 +547,18 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jPanel11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="msg_crud_libro_diario_cuenta" min="-2" pref="23" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btn_crud_libro_diario_cuenta_agregar" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btn_crud_libro_diario_cuenta_reset" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="msg_crud_libro_diario_cuenta" min="-2" pref="23" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="btn_crud_libro_diario_cuenta_reset" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn_crud_libro_diario_cuenta_agregar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
