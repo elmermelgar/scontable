@@ -579,7 +579,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_iva_credito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(btn_iva_debito)
                 .addGap(14, 14, 14)
                 .addComponent(btn_iva_exento)
@@ -630,7 +630,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(msg_crud_libro_diario_cuenta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -665,7 +665,7 @@ public class Inicio extends javax.swing.JFrame {
         );
 
         crud_libro_diario.getContentPane().add(jPanel4);
-        jPanel4.setBounds(10, 10, 780, 0);
+        jPanel4.setBounds(10, 10, 780, 256);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aero_background-wallpaper-1280x768.jpg"))); // NOI18N
         crud_libro_diario.getContentPane().add(jLabel13);
@@ -1814,6 +1814,10 @@ public class Inicio extends javax.swing.JFrame {
         setVisible(false);
         setVisible(true);
 
+         btn_nueva_partida.setVisible(true);
+         btn_modificar_partida.setVisible(true);
+         btn_agregar_cuenta.setVisible(false);
+         
         tabla.setModel(libroDiarioTM);
         tabla.setColumnModel(libroDiarioTM.getColumnModel());
         TransaccionDB tdb = new TransaccionDB();
@@ -1827,7 +1831,12 @@ public class Inicio extends javax.swing.JFrame {
 
         setVisible(false);
         setVisible(true);
-        tabla.setModel(catalogoCuentasTM);
+        
+        btn_nueva_partida.setVisible(false);
+         btn_modificar_partida.setVisible(false);
+         btn_agregar_cuenta.setVisible(true);
+         
+         tabla.setModel(catalogoCuentasTM);
         tabla.setColumnModel(catalogoCuentasTM.getColumnModel());
         CuentaDB cuenta = new CuentaDB();
         catalogoCuentasTM.setCatalogo_cuentas(cuenta.getCuentas());
