@@ -1074,6 +1074,11 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         tabla_planilla.getTableHeader().setReorderingAllowed(false);
+        tabla_planilla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabla_planillaMouseClicked(evt);
+            }
+        });
         scroll_tabla_planilla.setViewportView(tabla_planilla);
         if (tabla_planilla.getColumnModel().getColumnCount() > 0) {
             tabla_planilla.getColumnModel().getColumn(0).setMinWidth(250);
@@ -1082,28 +1087,35 @@ public class Inicio extends javax.swing.JFrame {
         }
 
         btn_planilla_registrar.setText("Registrar la planilla");
+        btn_planilla_registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_planilla_registrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_planilla_empleadosLayout = new javax.swing.GroupLayout(panel_planilla_empleados);
         panel_planilla_empleados.setLayout(panel_planilla_empleadosLayout);
         panel_planilla_empleadosLayout.setHorizontalGroup(
             panel_planilla_empleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_planilla_empleadosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(scroll_tabla_planilla, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
+                .addGroup(panel_planilla_empleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_planilla_empleadosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(scroll_tabla_planilla, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE))
+                    .addGroup(panel_planilla_empleadosLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(btn_planilla_registrar)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(panel_planilla_empleadosLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(btn_planilla_registrar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panel_planilla_empleadosLayout.setVerticalGroup(
             panel_planilla_empleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_planilla_empleadosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scroll_tabla_planilla, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scroll_tabla_planilla, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btn_planilla_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -3244,7 +3256,14 @@ public class Inicio extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_btn_mayorizarActionPerformed
+  private void tabla_planillaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabla_planillaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tabla_planillaMouseClicked
 
+    private void btn_planilla_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_planilla_registrarActionPerformed
+        // TODO add your handling code here:
+        
+    }
     private void btn_dlg_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlg_cancelarActionPerformed
         btn_dlg_fecha_inicio.setDate(null);
         btn_dlg_fecha_fin.setDate(null);

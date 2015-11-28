@@ -26,7 +26,7 @@ public class PlanillaTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 9;
+        return 7;
     }
 
     @Override
@@ -53,12 +53,6 @@ public class PlanillaTableModel extends AbstractTableModel {
                 value = plan.getAguinaldo();
                 break;
             case 6:
-                value = plan.getBono();
-                break;
-            case 7:
-                value = plan.getDescuento();
-                break;
-            case 8:
                 value = plan.getSalario_real();
                 break;
         }
@@ -67,7 +61,7 @@ public class PlanillaTableModel extends AbstractTableModel {
     
     public TableColumnModel getColumnModel(){
         TableColumnModel modelo = new DefaultTableColumnModel();
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 7; i++) {
             TableColumn col = new TableColumn(i);
             switch(i){
                 case 0:{
@@ -90,12 +84,6 @@ public class PlanillaTableModel extends AbstractTableModel {
                     col.setHeaderValue("Aguinaldo");
                     break;
                 case 6:
-                    col.setHeaderValue("Bono");
-                    break;
-                case 7:
-                    col.setHeaderValue("Descuento");
-                    break;
-                case 8:
                     col.setHeaderValue("Salario Real");
                     break;
                 
