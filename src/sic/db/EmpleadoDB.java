@@ -115,6 +115,7 @@ public class EmpleadoDB {
                 e.setNombre(res.getString("nombre_empleado"));
                 e.setApellido(res.getString("apellido_empleado"));
                 e.setSalario(res.getDouble("salario"));
+                e.setFecha_ingreso(res.getDate("fecha_entrada"));
                 
                 empleados.add(e);
             }

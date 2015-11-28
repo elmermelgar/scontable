@@ -4,6 +4,8 @@
  */
 package sic.model;
 
+import java.sql.Date;
+
 /**
  *
  * @author Oscar
@@ -14,6 +16,7 @@ public class Empleado {
     private String nombre;
     private String apellido;
     private Double salario;
+    private Date fecha_ingreso;
     
     private int numero_empleados = 0;
     private double monto_total_planilla = 0.0;
@@ -82,5 +85,12 @@ public class Empleado {
     public void setMonto_total_planilla(double monto_total_planilla) {
         this.monto_total_planilla = monto_total_planilla;
     }
-    
+
+    public Date getFecha_ingreso() {
+        return fecha_ingreso;
+    }
+
+    public void setFecha_ingreso(Date fecha_ingreso) {
+        this.fecha_ingreso = fecha_ingreso;
+    }
 }

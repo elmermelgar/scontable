@@ -33,10 +33,22 @@ public class PlanillaDB {
             double monto_afp = sal*AFP;
             plan.setAfp(monto_afp);
 //            double vacaciones = (sal/2)*VAC + (sal/2)*(ISSS + AFP); 
-            double vacaciones = 0.0;
+            double vacaciones = (sal/2)*1.3 + (sal/2)*0.14;
             plan.setVacacion(vacaciones);
+            int aniosTrabajados=plan.getAniosTrabajados(emp.getFecha_ingreso());
             double aguinaldo = 0.0;
-            plan.setAguinaldo(aguinaldo);
+            if(aniosTrabajados>=1&&aniosTrabajados<3){
+                aguinaldo = sal*10/30;
+                plan.setAguinaldo(aguinaldo);
+            }else if(aniosTrabajados>=3&&aniosTrabajados<10){
+                aguinaldo = sal*15/30;
+                plan.setAguinaldo(aguinaldo);
+            }else if(aniosTrabajados>=10){
+                aguinaldo = sal*18/30;
+                plan.setAguinaldo(aguinaldo);
+            }
+            
+            
             double bono = 0.0;
             plan.setBono(bono);
             double descuentos = 0.0;

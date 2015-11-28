@@ -4,7 +4,8 @@
  */
 package sic.model;
 
-import java.sql.Date;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -109,5 +110,21 @@ public class Planilla {
 
     public void setSalario_real(Double salario_real) {
         this.salario_real = salario_real;
+    }
+    
+    public int getAniosTrabajados(Date fecha_inicio){
+        Calendar cal=Calendar.getInstance();
+        int anioActual = cal.get(Calendar.YEAR);
+        int mesActual = cal.get(Calendar.MONTH);
+        int diaActual = cal.get(Calendar.DAY_OF_MONTH);
+        cal.setTime(fecha_inicio);
+        
+        int anio=anioActual-cal.get(Calendar.YEAR);
+        int mes=anioActual-cal.get(Calendar.MONTH);
+        if(mes==mesActual){
+            return cal.get(Calendar.DAY_OF_MONTH)<=diaActual?anio:anio-1;
+        }else{
+            return mes<mesActual?anio-1:anio;
+        }
     }
 }
