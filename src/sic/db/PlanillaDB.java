@@ -47,8 +47,6 @@ public class PlanillaDB {
                 aguinaldo = sal*18/30;
                 plan.setAguinaldo(aguinaldo);
             }
-            
-            
             double bono = 0.0;
             plan.setBono(bono);
             double descuentos = 0.0;
@@ -63,6 +61,5 @@ public class PlanillaDB {
     
     public void setPlanilla(List<Planilla> planilla) {
         this.planilla = planilla;
-    }
-    
+    }   
 }
