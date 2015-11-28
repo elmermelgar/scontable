@@ -2140,7 +2140,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(jLabel81)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(requisicion_datos, javax.swing.GroupLayout.PREFERRED_SIZE, 361, Short.MAX_VALUE)
+                    .addComponent(requisicion_datos, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
                     .addComponent(jScrollPane4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -2306,6 +2306,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel83.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel83.setText("BOLETAS DE TRABAJO");
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
@@ -2329,9 +2330,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(jLabel83)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(datos_boleta, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
+                    .addComponent(datos_boleta, javax.swing.GroupLayout.PREFERRED_SIZE, 277, Short.MAX_VALUE)
                     .addComponent(jScrollPane5))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jButton19.setBackground(new java.awt.Color(255, 204, 204));
@@ -3260,7 +3261,7 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tabla_planillaMouseClicked
 
-    private void btn_planilla_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_planilla_registrarActionPerformed
+    private void btn_planilla_registrarActionPerformed(java.awt.event.ActionEvent evt) {                                                       
         // TODO add your handling code here:
         
     }
