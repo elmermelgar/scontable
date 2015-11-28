@@ -1797,7 +1797,9 @@
             </Component>
             <Component class="javax.swing.JTextField" name="t_cedula_ut_cu">
               <Properties>
-                <Property name="editable" type="boolean" value="false"/>
+                <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="true" type="code"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
                 </Property>
@@ -1805,7 +1807,9 @@
             </Component>
             <Component class="javax.swing.JTextField" name="t_cedula_if_cu">
               <Properties>
-                <Property name="editable" type="boolean" value="false"/>
+                <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="true" type="code"/>
+                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="11" style="1"/>
                 </Property>
@@ -1919,7 +1923,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_ut_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -1932,7 +1938,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_if_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -1940,7 +1948,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_uet_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -1953,7 +1963,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_ii_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -1961,11 +1973,16 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_ue_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="t_cedula_mp_ue_qActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel37">
                   <Properties>
@@ -1984,7 +2001,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_if_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -1992,7 +2011,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_ut_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2000,7 +2021,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_ue_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2008,7 +2031,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_ii_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2016,7 +2041,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_mp_uet_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2144,7 +2171,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_ut_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2157,7 +2186,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_if_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2165,7 +2196,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_uet_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2178,7 +2211,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_ii_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2186,7 +2221,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_ue_q">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2209,7 +2246,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_if_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2217,7 +2256,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_ut_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2225,7 +2266,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_ue_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2233,7 +2276,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_ii_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
@@ -2241,7 +2286,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="t_cedula_cc_uet_m">
                   <Properties>
-                    <Property name="editable" type="boolean" value="false"/>
+                    <Property name="editable" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="true" type="code"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="11" style="1"/>
                     </Property>
