@@ -1347,37 +1347,32 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel42.setText("Inventario Final");
 
-        t_cedula_ut_cu.setEditable(true);
+        t_cedula_ut_cu.setEditable(false);
         t_cedula_ut_cu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_if_cu.setEditable(true);
+        t_cedula_if_cu.setEditable(false);
         t_cedula_if_cu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Materia Prima"));
 
-        t_cedula_mp_ut_q.setEditable(true);
+        t_cedula_mp_ut_q.setEditable(false);
         t_cedula_mp_ut_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel38.setText("Inventario Final (x Avance)");
 
-        t_cedula_mp_if_q.setEditable(true);
+        t_cedula_mp_if_q.setEditable(false);
         t_cedula_mp_if_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_mp_uet_q.setEditable(true);
+        t_cedula_mp_uet_q.setEditable(false);
         t_cedula_mp_uet_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel39.setText("Unidades terminadas");
 
-        t_cedula_mp_ii_q.setEditable(true);
+        t_cedula_mp_ii_q.setEditable(false);
         t_cedula_mp_ii_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_mp_ue_q.setEditable(true);
+        t_cedula_mp_ue_q.setEditable(false);
         t_cedula_mp_ue_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        t_cedula_mp_ue_q.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                t_cedula_mp_ue_qActionPerformed(evt);
-            }
-        });
 
         jLabel37.setText("Unidades equivalentes totales");
 
@@ -1385,19 +1380,19 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel35.setText("Unidades equivalentes");
 
-        t_cedula_mp_if_m.setEditable(true);
+        t_cedula_mp_if_m.setEditable(false);
         t_cedula_mp_if_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_mp_ut_m.setEditable(true);
+        t_cedula_mp_ut_m.setEditable(false);
         t_cedula_mp_ut_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_mp_ue_m.setEditable(true);
+        t_cedula_mp_ue_m.setEditable(false);
         t_cedula_mp_ue_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_mp_ii_m.setEditable(true);
+        t_cedula_mp_ii_m.setEditable(false);
         t_cedula_mp_ii_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_mp_uet_m.setEditable(true);
+        t_cedula_mp_uet_m.setEditable(false);
         t_cedula_mp_uet_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1483,23 +1478,23 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel12.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Costo de Conversión"));
 
-        t_cedula_cc_ut_q.setEditable(true);
+        t_cedula_cc_ut_q.setEditable(false);
         t_cedula_cc_ut_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel50.setText("Inventario Final (x Avance)");
 
-        t_cedula_cc_if_q.setEditable(true);
+        t_cedula_cc_if_q.setEditable(false);
         t_cedula_cc_if_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_cc_uet_q.setEditable(true);
+        t_cedula_cc_uet_q.setEditable(false);
         t_cedula_cc_uet_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel51.setText("Unidades terminadas");
 
-        t_cedula_cc_ii_q.setEditable(true);
+        t_cedula_cc_ii_q.setEditable(false);
         t_cedula_cc_ii_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_cc_ue_q.setEditable(true);
+        t_cedula_cc_ue_q.setEditable(false);
         t_cedula_cc_ue_q.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel52.setText("Unidades equivalentes totales");
@@ -1508,19 +1503,19 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel54.setText("Unidades equivalentes");
 
-        t_cedula_cc_if_m.setEditable(true);
+        t_cedula_cc_if_m.setEditable(false);
         t_cedula_cc_if_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_cc_ut_m.setEditable(true);
+        t_cedula_cc_ut_m.setEditable(false);
         t_cedula_cc_ut_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_cc_ue_m.setEditable(true);
+        t_cedula_cc_ue_m.setEditable(false);
         t_cedula_cc_ue_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_cc_ii_m.setEditable(true);
+        t_cedula_cc_ii_m.setEditable(false);
         t_cedula_cc_ii_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        t_cedula_cc_uet_m.setEditable(true);
+        t_cedula_cc_uet_m.setEditable(false);
         t_cedula_cc_uet_m.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2335,7 +2330,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(jLabel83)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(datos_boleta, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
+                    .addComponent(datos_boleta, javax.swing.GroupLayout.PREFERRED_SIZE, 277, Short.MAX_VALUE)
                     .addComponent(jScrollPane5))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
@@ -3545,10 +3540,6 @@ public class Inicio extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         CIF.dispose();
     }//GEN-LAST:event_jButton21ActionPerformed
-
-    private void t_cedula_mp_ue_qActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_cedula_mp_ue_qActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_t_cedula_mp_ue_qActionPerformed
 
     /**
      * @param args the command line arguments
