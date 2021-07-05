@@ -1,0 +1,2 @@
+# scontable
+Sistema Contable - Planillas
